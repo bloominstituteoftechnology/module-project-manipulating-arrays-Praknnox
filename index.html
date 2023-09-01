@@ -70,18 +70,21 @@
     // sumNumsWhile([1, 2, 3]) // should return 6
     // sumNumsWhile([1, 2, 13]) // should return "I'm too superstitious!"
     function sumNumsWhile(nums) {
-      /*let result3=0
+      let result3=0
       let index=0
       while(index<nums.length){
-        if(nums[index]===13){
-          result3="I'm too superstitious!"
-          break
-        }else{
-          result3+=nums[index]
+        if(typeof nums[index]==="number"){
+          if(nums[index]===13){
+            result3="I'm too superstitious!"
+            break
+          }else{
+            result3+=nums[index]
+          }
         }
+        index++
       }
-      return result3*/
-    }
+      return result3
+  }
 
     // 👉 CHALLENGE 4
     // 🧠 The function fightMonsters takes an integer (lifePoints) as its argument, and returns a string.
@@ -100,7 +103,7 @@
     // 🧠 There are many ways to solve this, but practice using a while loop.
     // 🧠 Work out using pen and paper how the round number and the lifePoints change after each round.
     // 🧠 As long as there are lifePoints, decrease lifePoints by round number, and increase round number by one.
-    function fightMonsters() {
+    function fightMonsters(integer) {
 
     }
 
