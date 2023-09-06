@@ -85,7 +85,7 @@
       }
       return result3
   }
-  //Did you know? It's ok to bake a cake for 42 yrs?
+  
 
     // 👉 CHALLENGE 4
     // 🧠 The function fightMonsters takes an integer (lifePoints) as its argument, and returns a string.
@@ -105,7 +105,14 @@
     // 🧠 Work out using pen and paper how the round number and the lifePoints change after each round.
     // 🧠 As long as there are lifePoints, decrease lifePoints by round number, and increase round number by one.
     function fightMonsters(integer) {
-
+      let round=1
+      while(integer>0){
+        integer-=round
+        if(integer<=0){
+          return `You died in round ${round}`
+        }
+        round++
+      }
     }
 
     // 👉 CHALLENGE 5
@@ -115,8 +122,15 @@
     // findEvenNums([0, 1, 2, 3, 4]) // should return [0, 2, 4]
     // ❗ Notes:
     // 🧠 Use any kind of loop you'd like and the push method to populate the array of even numbers.
-    function findEvenNums() {
-
+    function findEvenNums(arr) {
+      let evenstevens=[]
+      for(let dx in arr){
+        let buff=arr[dx]
+        if(buff%2===0){
+          evenstevens.push(buff)
+        }
+      }
+      return evenstevens
     }
 
     // 👉 CHALLENGE 6
@@ -126,8 +140,17 @@
     // 🧠 Ages in the subarrays should appear in the same order they appeared in the original array.
     // 🧠 Examples of usage:
     // separateAges([31, 12, 25, 65, 84, 20]) // should return [[12, 20], [31, 25, 65, 84]]
-    function separateAges() {
-
+    function separateAges(AGES) {
+      let under21=[]
+      let theother=[]
+      for(let index =0;index<AGES.length;index++){
+        if(AGES[index]<21){
+          under21.push(AGES[index])
+        }else{
+          theother.push(AGES[index])
+        }
+      }
+      return[under21,theother]
     }
 
     // 👉 CHALLENGE 7
